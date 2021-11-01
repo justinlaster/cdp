@@ -21,15 +21,15 @@ export default function Home( { allProductsData }) {
       <title>{siteTitle}</title>
     </Head>
     <section>
-      <h1>A List Of Products</h1>
+      <div className={'text-4xl py-5'}>Do you wanna be Jeff Bezos? Who doesn&apos;t! </div>
       <p>
-       Welcome to the Jeff Bezos Wannabe Product Depot
+       A collection of different products to make you Jeff Bezos, cash not included.
       </p>
     </section>
     <hr/>
-    <section>
-      <h2>Products</h2>
-      <ul>
+    <div className={'m-3'}>
+      <div className={'text-3xl'}>Products</div>
+      <ul className={'list-disc content-center m-10'}>
       {allProductsData.map(({ id, date, title, summary }) => (
             <li key={id}>
               <Link href={`/products/${id}`}>
@@ -41,7 +41,7 @@ export default function Home( { allProductsData }) {
           ))}
       </ul>
       <br/>
-    </section>
+    </div>
     <section>
       <Link href="/products">
         <a>All Products →</a>
